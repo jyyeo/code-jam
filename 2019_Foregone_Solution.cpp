@@ -1,5 +1,7 @@
 #include <iostream> 
+#include <string>
 #include <math.h>
+
 using namespace std;
 
 int findB(int N);
@@ -8,24 +10,23 @@ int main() {
     int T;
     cin >> T;
     for (int i = 0; i < T; i++) {
-        int N, A, B;
+        string N, A, B;
+        int c = 0;
         cin >> N;
-        B = findB(N);
-        A = N - B;
+        while (c < N.length()) {
+            if (N[c] == '4') {
+                A += '1';
+                B += '3';
+            }
+            else {
+                A += N[c];
+                if (!B.empty()) {
+                    B += '0';
+                }
+            }
+            c++;
+        }
         cout << "Case #" << i+1 << ": " << A << " " << B << endl;
     }
     return 0;
-}
-
-int findB(int N) {
-    int B = 0;
-    int e = 0;
-    while (N > 0) {
-        if (N%10 == 4) {
-            B += 3 * pow(10, e);
-        }
-        e++;
-        N /= 10;
-    }
-    return B;
 }
