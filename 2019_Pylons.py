@@ -38,7 +38,7 @@ for j in range(T):
 
     # maze is possible
     if (np.count_nonzero(maze) == R*C):
-        print("Case #{}: POSSIBLE".format(T))
+        print("Case #{}: POSSIBLE".format(j+1))
         for i in range(1, R*C+1):
             r, c = np.where(maze == i)
             print("{} {}". format(int(r+1), int(c+1)))
