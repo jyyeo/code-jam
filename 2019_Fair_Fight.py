@@ -13,12 +13,9 @@ for i in range(T):
 		while (end <= N):
 			max_charles = max(charles_skill[start:end])
 			max_delila = max(delila_skill[start:end])
-			# print(start, end, max_charles, max_delila)
 			if (abs(max_charles - max_delila) <= K):
 				pairs = pairs + 1 
-				# print(start,end)
 
 			end = end + 1
 			
-	print("Case # {}: {}".format(i+1, pairs))		
-	# print(pairs)
+	print("Case #{}: {}".format(i+1, pairs))		
