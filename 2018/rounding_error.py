@@ -11,7 +11,7 @@ for i in range(T):
 	for j in range(L):
 
 		rounded = round(arr[j] / N * 100)
-		print(rounded)
+		# print(rounded)
 		if rounded < arr[j] * 100:
 			k = 1
 			while k <= unanswered and unanswered > 0:
