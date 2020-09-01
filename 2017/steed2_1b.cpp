@@ -8,7 +8,8 @@ int main() {
 		double D;
 		int N;
 		scanf("%lf %d", &D, &N);
-		double max_speed = 10000.0, max_speed_curr = 10000.0;
+		double time = 0.0, time_curr = 0.0;
+		double max_speed = 1e99, max_speed_curr = 1e99;
 		for (int j = 0; j < N; j++) {
 			double distance, speed;
 			scanf("%lf %lf", &distance, &speed);
